@@ -9,8 +9,8 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (username, password, name, email) VALUES (
-    "vcr",
-    "vcr369",
-    "vijay",
-    "vcr369@gmail.com"
+    "mmk",
+    "mmk369",
+    "manic",
+    "mmk369@gmail.com"
 );
