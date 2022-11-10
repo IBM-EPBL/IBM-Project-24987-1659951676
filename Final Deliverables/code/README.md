@@ -1,1 +1,2 @@
-# newstracker
+# NEWS TRACKER APPLICATION
+
