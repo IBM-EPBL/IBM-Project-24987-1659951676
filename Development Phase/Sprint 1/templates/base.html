@@ -29,7 +29,6 @@
     <a href="/" class="navbar-brand">NewsTracker</a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav">
-        {% if g.user %}
         <a class="nav-item nav-link " href="/headlines">Headlines <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="/user/saved">My Stories</a>
         <a class="nav-item nav-link" href="/search">Detailed Search</a>
@@ -39,26 +38,19 @@
             My Queries
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink" id="dropdown">
-            {% if g.user.queries%}
-            {%for query in g.user.queries%}
             <li class="dropdown-item" style="
             padding-right: 10px"><a class="query-link" href="/search/{{query.id}}">{{query.name}}
               </a>
               <span data-query="{{query.id}}" class="close">&times;</span>
               <!-- <button type="button" class="btn btn-outline-success btn-sm">Make Default</button> -->
             </li>
-            {%endfor%}
-            {% else %}
             <span class="dropdown-item">You currently have no saved queries.</span>
-            {% endif %}
           </ul>
         </li>
         <a class="nav-item nav-link" href="/logout">Logout</a>
-        {% else %}
         <a class="nav-item nav-link" href="/headlines">Headlines</a>
         <a class="nav-item nav-link" href="/login">Login</a>
         <a class="nav-item nav-link" href="/register">Register</a>
-        {% endif %}
       </div>
     </div>
     <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -73,19 +65,10 @@
   </nav>
   <div id="indentation">
   </div>
-  {%with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
   <section class="messages">
-    {% for category, msg in get_flashed_messages(with_categories=true)%}
     <span class="{{category}}">{{msg}}</span>
-    {% endfor %}
   </section>
-  {% endif %}
-  {% endwith %}
-
-  {% block content %}
   <!-- content goes here -->
-  {% endblock %}
   <script src="/static/newstracker.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
