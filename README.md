@@ -35,4 +35,21 @@ As our lives are very busy these days, we often feel we need more than 24 hrs. a
  - Integrate the application with news APIs and store the data in the database.
 
  - The database will have all the details and the user can search the news by using a search bar.
- 
+## FrontEnd:
+- HTML
+- CSS
+- Javascript
+
+## BackEnd:
+- Python
+- Flask
+- [SendinBlue](https://www.sendinblue.com/) 
+- IBM DB2
+- JWT Authentication
+
+## Performance:
+The app works well in both PCs and mobile phones. It takes around 1-2 seconds for the user to login and 5-8 seconds to load the news content. The app didn’t crash upon multiple request and it handled multiple requests effortlessly. We have implemented infinite scrolling mechanism which loads the data whenever the user scrolls the screen , this helps the user to save data and helps the app to load fast.
+
+## URLs for the site:
+- [Live website Link](http://159.122.183.93:31965)
+- [Demo video link](https://drive.google.com/file/d/1C2Y9xc5TgfFzpX3_xcEgFnk2_VqRjpGL/view?usp=sharing)
